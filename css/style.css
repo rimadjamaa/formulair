@@ -11,7 +11,6 @@
 
 .hero {
   width: 100%;
-  height: 100vh;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 3, 51, 0.3)), to(rgba(12, 3, 51, 0.3)));
   background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
   position: relative;
@@ -40,8 +39,9 @@
 
 .containr {
   z-index: 100;
-  width: 50%;
-  height: 90%;
+  max-width: 700px;
+  margin: 30px 0;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
 }
@@ -67,6 +67,9 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 22px;
 }
 
@@ -84,6 +87,7 @@
 }
 
 .containr .formulair-container .group input {
+  width: 350px;
   margin-top: 3px;
   color: black;
   font-size: 16px;
@@ -108,7 +112,6 @@
 
 .containr .formulair-container .droit {
   text-align: left;
-  margin-left: 100px;
   padding: 8px 0;
   color: white;
 }
@@ -142,7 +145,7 @@
 }
 
 .containr .button a {
-  width: 150px;
+  width: 200px;
   height: 40px;
   background-color: #3edee4;
   color: white;
@@ -150,10 +153,35 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 10px 0 20px 0;
 }
 
 .containr .button a:hover {
   background-color: black;
-  margin: 2px;
+}
+
+@media (max-width: 768px) {
+  .containr {
+    margin: 5px 0;
+    max-width: 100%;
+    height: 100%;
+  }
+  .containr input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .containr {
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+  }
+  .containr .formulair-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 22px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
